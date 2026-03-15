@@ -33,21 +33,21 @@ Key observations:
 - **AUC=0.86** — a huge jump from Naive Bayes (0.74)
 - **OverTime_Yes** was by far the strongest predictor of attrition
 - **BusinessTravel_Frequently** and **MaritalStatus_Single** also strongly increase attrition risk
-- **JobLevel** and **JobInvolvement** are protective — higher level and more engaged employees tend to stay
+- **JobLevel** and **JobInvolvement** are protective — higher levels and more engaged employees tend to stay
 
 ## Plots
 
 ### Feature Coefficients
-![Logistic Regression Coefficients](../outputs/04_lr_feature_coefficients.png)
+![Logistic Regression Coefficients](04_lr_feature_coefficients.png)
 
 OverTime_Yes dominates with a coefficient of ~1.7. Continuous features like MonthlyIncome have near-zero coefficients — the model relies more on categorical indicators.
 
 ### PCA Decision Boundary
-![Logistic Regression PCA](../outputs/04_lr_pca_plot.png)
+![Logistic Regression PCA](04_lr_pca_plot.png)
 
 The linear decision boundary is sharper and more confident compared to Naive Bayes, with a smoother probability gradient reflecting the stronger AUC.
 
 ### ROC Curve
-![Logistic Regression ROC](../outputs/04_lr_roc.png)
+![Logistic Regression ROC](04_lr_roc.png)
 
 AUC of 0.86 — the best result in the entire project.
