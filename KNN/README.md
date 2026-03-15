@@ -26,7 +26,7 @@ The main hyperparameter is **k** — too small and the model overfits, too large
 | AUC | - | 0.54 |
 
 ## What we found
-KNN really struggled with this dataset. Without scaling it predicted only the majority class (No attrition), giving F1=0. After adding StandardScaler and tuning k with GridSearchCV, the best result was k=1 with F1=0.22 and AUC=0.54 — barely better than random guessing.
+KNN really struggled with this dataset. Without scaling, it predicted only the majority class (No attrition), giving F1=0. After adding StandardScaler and tuning k with GridSearchCV, the best result was k=1 with F1=0.22 and AUC=0.54 — barely better than random guessing.
 
 The core issues are:
 - **Class imbalance** (84% No vs 16% Yes) — KNN has no built-in way to handle this
@@ -36,11 +36,11 @@ The core issues are:
 ## Plots
 
 ### Train/Test F1 Curve
-![KNN Train Test Curve](../outputs/01_knn_train_test_curve.png)
+![KNN Train Test Curve](01_knn_train_test_curve.png)
 
 The test F1 peaks at very small k values and flatlines to 0 after k=40 — there is no sweet spot where the model generalizes well.
 
 ### ROC Curve
-![KNN ROC Curve](../outputs/01_knn_roc.png)
+![KNN ROC Curve](01_knn_roc.png)
 
 AUC of 0.54 confirms the model has almost no discriminative power on this dataset.
