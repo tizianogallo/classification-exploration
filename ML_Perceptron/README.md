@@ -42,11 +42,11 @@ Key observations:
 ## Plots
 
 ### Confusion Matrix
-![MLP Confusion Matrix](../outputs/06_mlp_confusion_matrix.png)
+![MLP Confusion Matrix](06_mlp_confusion_matrix.png)
 
 The model catches some attrition cases but still misses a significant portion of the minority class.
 
 ### ROC Curve
-![MLP ROC](../outputs/06_mlp_roc.png)
+![MLP ROC](06_mlp_roc.png)
 
 AUC of 0.77 — below the linear models but better than Decision Tree and Naive Bayes.
