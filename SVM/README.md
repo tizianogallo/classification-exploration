@@ -40,11 +40,11 @@ Key observations:
 ## Plots
 
 ### t-SNE Decision Boundary
-![SVM t-SNE Plot](../outputs/05_svm_tsne_plot.png)
+![SVM t-SNE Plot](05_svm_tsne_plot.png)
 
 Unlike the PCA plots in previous notebooks, t-SNE reveals the true complexity of the data — a ring-like structure with attrition cases scattered throughout all clusters. This explains why no model has been able to push F1 significantly above 0.60.
 
 ### ROC Curve
-![SVM ROC](../outputs/05_svm_roc.png)
+![SVM ROC](05_svm_roc.png)
 
 AUC of 0.86 — tied with Logistic Regression for best in the project.
