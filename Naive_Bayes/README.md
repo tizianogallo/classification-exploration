@@ -41,6 +41,6 @@ Key observations:
 Reducing to 2 PCA components reveals three horizontal clusters in the data, likely driven by department or job level. Attrition cases concentrate on the left side of the feature space where the probability background is warmer.
 
 ### ROC Curve
-![Naive Bayes ROC](../outputs/03_nb_roc.png)
+![Naive Bayes ROC](03_nb_roc.png)
 
 AUC of 0.74 — best result so far at this stage of the project.
