@@ -1,7 +1,7 @@
 # 02 - Decision Tree
 
 ## What is a Decision Tree?
-A Decision Tree splits the data into subsets based on feature thresholds, creating a tree-like structure of decisions. At each node, the algorithm picks the feature and split point that best separates the classes (using Gini impurity or Entropy). It keeps splitting until it reaches a stopping condition like max depth or minimum samples per leaf.
+A Decision Tree splits the data into subsets based on feature thresholds, creating a tree-like structure of decisions. At each node, the algorithm picks the feature and split point that best separates the classes (using Gini impurity or Entropy). It continues splitting until it reaches a stopping condition, such as a maximum depth or a minimum number of samples per leaf.
 
 The result is a highly interpretable model — you can literally follow the branches to understand why a prediction was made.
 
@@ -25,7 +25,7 @@ The result is a highly interpretable model — you can literally follow the bran
 | AUC | - | 0.69 |
 
 ## What we found
-A big improvement over KNN — test F1 jumped from 0.22 to 0.44 and AUC from 0.54 to 0.69. However overfitting was clear with train F1 at 0.85. GridSearchCV found the best params at `criterion=entropy, max_depth=50` — but the parameter analysis revealed that test F1 actually peaks around depth 9-10 and flattens after that, while train keeps climbing.
+A big improvement over KNN — test F1 jumped from 0.22 to 0.44 and AUC from 0.54 to 0.69. However, overfitting was clear with train F1 at 0.85. GridSearchCV found the best params at `criterion=entropy, max_depth=50` — but the parameter analysis revealed that test F1 actually peaks around depth 9-10 and flattens after that, while train keeps climbing.
 
 Key observations:
 - **max_depth** had the biggest impact — deeper trees overfit heavily
@@ -35,11 +35,11 @@ Key observations:
 ## Plots
 
 ### F1 Score vs Max Depth
-![Decision Tree Max Depth](../outputs/02_dt_max_depth_curve.png)
+![Decision Tree Max Depth](02_dt_max_depth_curve.png)
 
-Test F1 peaks around depth 9-10 then flattens, while train keeps climbing to 0.83 — a textbook overfitting pattern.
+Test F1 peaks around depth 9-10, then flattens, while train keeps climbing to 0.83 — a textbook overfitting pattern.
 
 ### ROC Curve
-![Decision Tree ROC](../outputs/02_dt_roc.png)
+![Decision Tree ROC](02_dt_roc.png)
 
-AUC of 0.69 — a solid improve
+AUC of 0.69 — a solid improvement
