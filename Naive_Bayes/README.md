@@ -36,7 +36,7 @@ Key observations:
 ## Plots
 
 ### PCA Decision Boundary
-![Naive Bayes PCA Plot](../outputs/03_nb_pca_plot.png)
+![Naive Bayes PCA Plot](03_nb_pca_plot.png)
 
 Reducing to 2 PCA components reveals three horizontal clusters in the data, likely driven by department or job level. Attrition cases concentrate on the left side of the feature space where the probability background is warmer.
 
